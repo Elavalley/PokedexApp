@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PokedexApp.SimulatorPage"
+             Title="Battle Simulation"
+             BackgroundColor="LightGray">
+    <VerticalStackLayout>
+        <Label Text="It will be a battle for the ages.... When its ready" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center" Padding="50"/>
+        <Image
+            x:Name="Construct"
+            Source="1.png"
+            HeightRequest="185"
+            Aspect="AspectFit"
+            SemanticProperties.Description="under construction page"
+            HorizontalOptions="Center" 
+            VerticalOptions="Center"/>
+        <Label
+            Style="{StaticResource SubHeadline}"
+            Text="Sorry! This project is currently still under construction until further notice."
+            HorizontalOptions="Center"
+            FontSize="35"
+            SemanticProperties.HeadingLevel="Level1"
+            SemanticProperties.Description="Author statement"
+            VerticalOptions="Center"
+            Padding="100" />
+    </VerticalStackLayout>
+</ContentPage>

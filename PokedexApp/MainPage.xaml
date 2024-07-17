@@ -3,16 +3,17 @@
         xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         x:Class="PokedexApp.MainPage"
-        Title="Pokedex">
+        Title="Pokedex"
+        BackgroundColor="White">
 
 
         <ScrollView>
-            <VerticalStackLayout Spacing="20" Padding="20">
+            <VerticalStackLayout Spacing="80" Padding="40">
                 <!-- Pokeball Animation -->
                     <Image
                         x:Name="AnimatedPokeball"
                         Source="closed.png"
-                        HeightRequest="185"
+                        HeightRequest="140"
                         Aspect="AspectFit"
                         SemanticProperties.Description="pokeball"
                         HorizontalOptions="Center" />
@@ -20,8 +21,9 @@
                         x:Name="PokedexPic"
                         Source="picture.png"
                         HeightRequest="200"
-                        Aspect="AspectFit"
-                        HorizontalOptions="Center" />
+                        Aspect="AspectFill"
+                        HorizontalOptions="Center"
+                        WidthRequest="600" />
 
 
                     <!-- Subtitle -->
@@ -34,66 +36,69 @@
                         SemanticProperties.Description="Author statement" />
 
                 <!-- Buttons Grid -->
-                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" RowSpacing="20" ColumnSpacing="20" WidthRequest="500" HorizontalOptions="Center">
+                <Grid ColumnDefinitions="*,*,*" RowDefinitions="2*,*" RowSpacing="20" ColumnSpacing="20" WidthRequest="700" HorizontalOptions="Center">
                     <Button
                         Grid.Row="0"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         x:Name="Pokedex"
                         Text="Browse the PokeDex"
+                        FontSize="60"
+                        FontAttributes="Bold"
+                        FontFamily="PokedexApp/Resources/Fonts/HvDTrial_Brandon_Grotesque_black-BF64a625c944b08.otf"
                         BorderColor="Blue"
                         BorderWidth="3"
-                        BackgroundColor="Yellow"
+                        BackgroundColor="#FFCC00"
                         TextColor="Black"
                         Padding="10,5"
                         CornerRadius="5"
                         SemanticProperties.Hint="Goes to pokedex search class"
                         Clicked="OnPokedexClicked"
-                        HorizontalOptions="Fill"
-                        VerticalOptions="Fill"/>
+                        HeightRequest="120"
+                        WidthRequest="700"/>
                     <Button
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        x:Name="Add"
-                        Text="Add a Pokemon"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        x:Name="Typing"
+                        Text="View the type"
                         BorderColor="Blue"
                         BorderWidth="3"
-                        BackgroundColor="Yellow"
+                        BackgroundColor="#FFCC00"
                         TextColor="Black"
                         Padding="10,5"
                         CornerRadius="5"
-                        SemanticProperties.Hint="starts add a new pokemon"
-                        Clicked="OnAddClicked" 
+                        SemanticProperties.Hint="pulls up typing chart"
+                        Clicked="OnTypingClicked" 
                         HorizontalOptions="Fill"
                         VerticalOptions="Fill"
                         />
                     <Button
                         Grid.Row="1"
                         Grid.Column="0"
-                        x:Name="Battle"
-                        Text="Simulate A battle"
+                        x:Name="Moves"
+                        Text="Check Moves and Abilities"
                         BorderColor="Blue"
                         BorderWidth="3"
                         Padding="10,5"
                         CornerRadius="5"
-                        BackgroundColor="Yellow"
+                        BackgroundColor="#FFCC00"
                         TextColor="Black"
-                        SemanticProperties.Hint="starts battle simulator"
-                        Clicked="OnBattleClicked" 
+                        SemanticProperties.Hint="pulls up complete list for querying of moves and abilities"
+                        Clicked="OnMovesClicked" 
                         HorizontalOptions="Fill"
                         VerticalOptions="Fill"/>
                     <Button
                         Grid.Row="1"
                         Grid.Column="1"
-                        x:Name="Catcher"
+                        x:Name="Battle"
                         BorderColor="Blue"
                         BorderWidth="3"
                         CornerRadius="5"
                         Padding="10,5"
-                        BackgroundColor="Yellow"
+                        BackgroundColor="#FFCC00"
                         TextColor="Black"
-                        Text="Catch Pokemon!"
-                        SemanticProperties.Hint="stops pokeball animation"
-                        Clicked="OnCatcherClicked" 
+                        Text="Battling"
+                        SemanticProperties.Hint="Battle Simulator"
+                        Clicked="OnBattleClicked" 
                         HorizontalOptions="Fill"
                         VerticalOptions="Fill"/>
                 </Grid>

@@ -2,9 +2,10 @@
 
 public partial class MainPage : ContentPage
 {
-	private string[] imageNames = { "closed.png", "halfopen.png", "open.png" };
+	private string[] imageNames1 = { "closed.png", "halfopen.png", "open.png" };
 	private int currentImageIndex = 0;
-	private bool isAnimating = false;
+	private bool ispokeball = false;
+
 
 	public MainPage()
 	{
@@ -15,34 +16,39 @@ public partial class MainPage : ContentPage
 	private void OnPokedexClicked(object sender, EventArgs e)
 	{
 		Pokedex.Text = "Searching For Pokemon?";
+		StartAnimation();
 	}
-	private void OnCatcherClicked(object sender, EventArgs e)
+	private async void OnBattleClicked(object sender, EventArgs e)
 	{
 		StopAnimation();
-		Catcher.Text = "Did you Catch it?";
+		await Navigation.PushAsync(new PokedexApp.SimulatorPage());
+
 	}
-	private void OnBattleClicked(object sender, EventArgs e)
+	private void OnMovesClicked(object sender, EventArgs e)
 	{
-		Battle.Text = "Time to Battle!";
+		Moves.Text = "Time to Battle!";
+		StopAnimation();
+
 	}
-	private void OnAddClicked(object sender, EventArgs e)
+	private void OnTypingClicked(object sender, EventArgs e)
 	{
-		Add.Text = "Adding a new pokemon?";
+		Typing.Text = "View Typing Chart";
+		StopAnimation();
 	}
-	private async void StartAnimation()
+	public async void StartAnimation()
 	{
-	isAnimating = true;
-	while (isAnimating)
+	ispokeball = true;
+	while (ispokeball)
 		{
-		AnimatedPokeball.Source = imageNames[currentImageIndex];
-		currentImageIndex = (currentImageIndex + 1) % imageNames.Length;
+		AnimatedPokeball.Source = imageNames1[currentImageIndex];
+		currentImageIndex = (currentImageIndex + 1) % imageNames1.Length;
 		await Task.Delay(1000); // Delay between image changes (in miliseconds)
 		}
 	}
 
-	private void StopAnimation()
+	public void StopAnimation()
 	{
-	isAnimating = false;
+	ispokeball = false;
 	}
 }
 
