@@ -1,4 +1,6 @@
-﻿namespace PokedexApp;
+﻿using AuthenticationServices;
+
+namespace PokedexApp;
 
 public partial class MainPage : ContentPage
 {
@@ -11,6 +13,8 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 		StartAnimation();
+		Icebeam.IsVisible = false;
+		
 	}
 
 	private void OnPokedexClicked(object sender, EventArgs e)
@@ -35,6 +39,10 @@ public partial class MainPage : ContentPage
 		Typing.Text = "View Typing Chart";
 		StopAnimation();
 	}
+	public async void OnBlastClicked(object sender, EventArgs e)
+	{
+		await AnimateIceBeamAsync();
+	}
 	public async void StartAnimation()
 	{
 	ispokeball = true;
@@ -49,6 +57,19 @@ public partial class MainPage : ContentPage
 	public void StopAnimation()
 	{
 	ispokeball = false;
+	}
+	private async Task AnimateIceBeamAsync()
+	{
+		Icebeam.Rotation= 180;
+		Icebeam.IsVisible = true;
+		Icebeam.TranslationX = 0;
+
+		var animation = new Animation(v => Icebeam.TranslationX = v, 0, -300);
+
+		animation.Commit(this, "IceBeamAnimation", 16, 1000, Easing.Linear, (v, c) => Icebeam.TranslationX = 0);
+
+		await Task.Delay(1000);
+		Icebeam.IsVisible = false;
 	}
 }
 

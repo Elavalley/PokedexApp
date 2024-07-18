@@ -322,6 +322,12 @@
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/r/Resources/seven.png
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/r/Resources/five.png
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/PokedexApp.sourcelink.json
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/f/HvDTrial_Brandon_Grotesque_black-BF64a625c944b08.otf
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/r/Resources/venasaur.png
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/r/Resources/mewtwo.png
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/r/Resources/charizard.png
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/r/Resources/icebeam.png
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/r/Resources/blastoise.png
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/Microsoft.Maui.Controls.HotReload.Forms.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/Microsoft.VisualStudio.DesignTools.TapContract.dll
