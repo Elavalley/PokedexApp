@@ -24,20 +24,16 @@ public partial class MainPage : ContentPage
 	}
 	private async void OnBattleClicked(object sender, EventArgs e)
 	{
-		StopAnimation();
 		await Navigation.PushAsync(new PokedexApp.SimulatorPage());
 
 	}
 	private void OnMovesClicked(object sender, EventArgs e)
 	{
-		Moves.Text = "Time to Battle!";
-		StopAnimation();
 
 	}
 	private void OnTypingClicked(object sender, EventArgs e)
 	{
 		Typing.Text = "View Typing Chart";
-		StopAnimation();
 	}
 	public async void OnBlastClicked(object sender, EventArgs e)
 	{
@@ -60,14 +56,13 @@ public partial class MainPage : ContentPage
 	}
 	private async Task AnimateIceBeamAsync()
 	{
-		Icebeam.Rotation= 180;
+		
 		Icebeam.IsVisible = true;
 		Icebeam.TranslationX = 0;
 
 		var animation = new Animation(v => Icebeam.TranslationX = v, 0, -300);
 
 		animation.Commit(this, "IceBeamAnimation", 16, 1000, Easing.Linear, (v, c) => Icebeam.TranslationX = 0);
-
 		await Task.Delay(1000);
 		Icebeam.IsVisible = false;
 	}

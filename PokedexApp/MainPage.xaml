@@ -55,7 +55,7 @@
                                 Source="icebeam.png"
                                 Aspect="AspectFit"
                                 WidthRequest="100"
-                                HorizontalOptions="Start" />
+                                HorizontalOptions="Center"/>
                             <Image
 
                                 x:Name="Mewtwo"
