@@ -6,7 +6,7 @@ public partial class MainPage : ContentPage
 {
 	private string[] imageNames1 = { "closed.png", "halfopen.png", "open.png" };
 	private int currentImageIndex = 0;
-	private bool ispokeball = false;
+	private bool ispokeball = true;
 
 
 	public MainPage()
@@ -17,9 +17,8 @@ public partial class MainPage : ContentPage
 		
 	}
 
-	private void OnPokedexClicked(object sender, EventArgs e)
+	private void OnPokedexClicked(object sender, EventArgs e) // this is tahmid's 
 	{
-		Pokedex.Text = "Searching For Pokemon?";
 		StartAnimation();
 	}
 	private async void OnBattleClicked(object sender, EventArgs e)
@@ -27,13 +26,13 @@ public partial class MainPage : ContentPage
 		await Navigation.PushAsync(new PokedexApp.SimulatorPage());
 
 	}
-	private void OnMovesClicked(object sender, EventArgs e)
+	private async void OnMovesClicked(object sender, EventArgs e)
 	{
-
+		await Navigation.PushAsync(new PokedexApp.MovesPage());
 	}
-	private void OnTypingClicked(object sender, EventArgs e)
+	private async void OnTypingClicked(object sender, EventArgs e)
 	{
-		Typing.Text = "View Typing Chart";
+		await Navigation.PushAsync(new PokedexApp.TypeChart());
 	}
 	public async void OnBlastClicked(object sender, EventArgs e)
 	{
