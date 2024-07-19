@@ -18,5 +18,10 @@
             Padding="100"
             LineBreakMode="WordWrap"
             Margin="15" />
+        <Image
+            Source="construct.jpg"
+            x:Name="construct"
+            VerticalOptions="EndAndExpand"        
+        />
     </VerticalStackLayout>
 </ContentPage>

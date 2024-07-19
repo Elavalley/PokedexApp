@@ -3,10 +3,22 @@
         xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         x:Class="PokedexApp.MainPage"
-        Title="Pokedex"
-        BackgroundColor="White">
-
-
+        Title="Pokedex">
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="#333333" Offset="0.1"/>
+            <GradientStop Color="#000000" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
+    
+    
+    
+    <Border
+    StrokeShape="Rectangle"
+    Stroke="Black"
+    StrokeThickness="10"
+    Padding="0"    >
         <ScrollView>
             <VerticalStackLayout Spacing="80" Padding="40">
                     <Grid RowDefinitions="*,*,*,*">
@@ -64,7 +76,7 @@
                                 WidthRequest="100"/>
                             <Button
                                 x:Name="Blast"
-                                Text="Blast!"
+                                Text="Ice Beam!"
                                 FontSize="20"
                                 FontAttributes="Bold"
                                 FontFamily="PokedexApp/Resources/Fonts/HvDTrial_Brandon_Grotesque_black-BF64a625c944b08.otf"
@@ -83,7 +95,6 @@
                         </StackLayout>
                     </Grid>
 
-                <!-- Buttons Grid -->
                 <Grid ColumnDefinitions="*,*,*" RowDefinitions="2*,*" RowSpacing="20" ColumnSpacing="20" WidthRequest="700" HorizontalOptions="Center">
                     <Button
                         Grid.Row="0"
@@ -161,4 +172,5 @@
                 </Grid>
             </VerticalStackLayout>
     </ScrollView>
+    </Border>
 </ContentPage>
