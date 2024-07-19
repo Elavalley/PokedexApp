@@ -7,11 +7,10 @@ public partial class MainPage : ContentPage
 	private string[] imageNames1 = { "closed.png", "halfopen.png", "open.png" };
 	private int currentImageIndex = 0;
 	private bool ispokeball = true;
-
-
 	public MainPage()
 	{
 		InitializeComponent();
+		NavigationPage.SetHasNavigationBar(this, false);
 		StartAnimation();
 		Icebeam.IsVisible = false;
 		
