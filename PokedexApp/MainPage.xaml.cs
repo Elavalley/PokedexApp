@@ -18,7 +18,7 @@ public partial class MainPage : ContentPage
 
 	private async void OnPokedexClicked(object sender, EventArgs e) // this is tahmid's 
 	{
-		//await Navigation.PushAsync(new PokedexApp.PokedexPage());
+		await Navigation.PushAsync(new PokedexApp.PokedexPage());
 	}
 	private async void OnBattleClicked(object sender, EventArgs e)
 	{

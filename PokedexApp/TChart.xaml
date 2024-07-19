@@ -4,13 +4,6 @@
              x:Class="PokedexApp.TChart">
     <ContentPage.Content>
     <VerticalStackLayout>
-        <Image
-        x:Name="PokedexPic"
-        Source="picture.png"
-        HeightRequest="200"
-        Aspect="AspectFill"
-        HorizontalOptions="Center"
-        WidthRequest="600" />
     </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>

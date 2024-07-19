@@ -52,6 +52,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.PokedexPage.xam
 build_metadata.AdditionalFiles.TargetPath = PokedexPage.xaml
 build_metadata.AdditionalFiles.RelativePath = PokedexPage.xaml
 
+[/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/PokemonPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.PokemonPage.xaml
+build_metadata.AdditionalFiles.TargetPath = PokemonPage.xaml
+build_metadata.AdditionalFiles.RelativePath = PokemonPage.xaml
+
 [/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.Resources.Styles.Colors.xaml
