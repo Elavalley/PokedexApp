@@ -67,6 +67,7 @@
                                 Source="icebeam.png"
                                 Aspect="AspectFit"
                                 WidthRequest="100"
+                                HeightRequest="50"
                                 HorizontalOptions="Center"/>
                             <Image
 

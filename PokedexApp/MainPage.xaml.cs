@@ -18,7 +18,6 @@ public partial class MainPage : ContentPage
 
 	private void OnPokedexClicked(object sender, EventArgs e) // this is tahmid's 
 	{
-		StartAnimation();
 	}
 	private async void OnBattleClicked(object sender, EventArgs e)
 	{
