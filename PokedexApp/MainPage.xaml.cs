@@ -16,19 +16,20 @@ public partial class MainPage : ContentPage
 		
 	}
 
-	private void OnPokedexClicked(object sender, EventArgs e) // this is tahmid's 
+	private async void OnPokedexClicked(object sender, EventArgs e) // this is tahmid's 
 	{
+		//await Navigation.PushAsync(new PokedexApp.PokedexPage());
 	}
 	private async void OnBattleClicked(object sender, EventArgs e)
 	{
 		await Navigation.PushAsync(new PokedexApp.SimulatorPage());
 
 	}
-	private async void OnMovesClicked(object sender, EventArgs e)
+	private async void OnMovesClicked(object sender, EventArgs e) // liam or isaiah 
 	{
 		await Navigation.PushAsync(new PokedexApp.MovesPage());
 	}
-	private async void OnTypingClicked(object sender, EventArgs e)
+	private async void OnTypingClicked(object sender, EventArgs e) // liam or isaiah 
 	{
 		await Navigation.PushAsync(new PokedexApp.TypeChart());
 	}

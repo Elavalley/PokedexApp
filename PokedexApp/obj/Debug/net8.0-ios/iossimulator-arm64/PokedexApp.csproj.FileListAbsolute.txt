@@ -321,6 +321,7 @@
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/r/Resources/icebeam.png
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/r/Resources/blastoise.png
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/r/Resources/construct.jpg
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/r/Resources/trees.jpg
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/Microsoft.Maui.Controls.HotReload.Forms.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/Microsoft.VisualStudio.DesignTools.TapContract.dll
@@ -337,12 +338,15 @@
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.iOS.stamp
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.Controls.Compatibility.stamp
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.Controls.stamp
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.Controls.HotReload.Forms.stamp
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.Controls.Xaml.stamp
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.stamp
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.Essentials.stamp
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Maui.Graphics.stamp
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.VisualBasic.Core.stamp
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.VisualBasic.stamp
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.VisualStudio.DesignTools.MobileTapContracts.stamp
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.VisualStudio.DesignTools.TapContract.stamp
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Win32.Primitives.stamp
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/Microsoft.Win32.Registry.stamp
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/obj/Debug/net8.0-ios/iossimulator-arm64/resourcestamps/mscorlib.stamp
