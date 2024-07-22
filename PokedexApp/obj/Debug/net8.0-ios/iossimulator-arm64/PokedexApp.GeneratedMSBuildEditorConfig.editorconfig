@@ -1,0 +1,77 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PokedexApp
+build_property.ProjectDir = /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/BattleSimulator.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.BattleSimulator.xaml
+build_metadata.AdditionalFiles.TargetPath = BattleSimulator.xaml
+build_metadata.AdditionalFiles.RelativePath = BattleSimulator.xaml
+
+[/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/MandA.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.MandA.xaml
+build_metadata.AdditionalFiles.TargetPath = MandA.xaml
+build_metadata.AdditionalFiles.RelativePath = MandA.xaml
+
+[/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/PokedexPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.PokedexPage.xaml
+build_metadata.AdditionalFiles.TargetPath = PokedexPage.xaml
+build_metadata.AdditionalFiles.RelativePath = PokedexPage.xaml
+
+[/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/PokemonPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.PokemonPage.xaml
+build_metadata.AdditionalFiles.TargetPath = PokemonPage.xaml
+build_metadata.AdditionalFiles.RelativePath = PokemonPage.xaml
+
+[/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+
+[/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/TChart.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PokedexApp.TChart.xaml
+build_metadata.AdditionalFiles.TargetPath = TChart.xaml
+build_metadata.AdditionalFiles.RelativePath = TChart.xaml

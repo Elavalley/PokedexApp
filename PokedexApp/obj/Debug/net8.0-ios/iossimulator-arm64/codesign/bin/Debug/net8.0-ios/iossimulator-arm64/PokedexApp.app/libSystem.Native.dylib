@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/PokedexApp.app/libSystem.Native.dylib

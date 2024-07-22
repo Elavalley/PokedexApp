@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PokedexApp"
+             x:Class="PokedexApp.PokemonPage"
+             BackgroundColor="White">
+
+    <ContentPage.Resources>
+        <Style x:Key="HeaderLabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+        <Style x:Key="InfoFrameStyle" TargetType="Frame">
+            <Setter Property="BorderColor" Value="#FF0000"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+        </Style>
+        <local:ProgressBar x:Key="ProgressBar"/>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <Grid Padding="20" RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Info Bar -->
+            <Frame Grid.Row="0" BackgroundColor="#FF0000" Padding="10" CornerRadius="0">
+                <Label Text="INFO" Style="{StaticResource HeaderLabelStyle}"/>
+            </Frame>
+
+            <!-- Pokemon Name and Image -->
+            <Grid Grid.Row="1" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Column="0" CornerRadius="200" BorderColor="#FF0000" Padding="0" 
+HeightRequest="400" WidthRequest="400">
+                    <Image Source="charizard.png" Aspect="AspectFill"/>
+                </Frame>
+
+                <Frame Grid.Column="1" BackgroundColor="#FF0000" Padding="10">
+                    <Label Text="Charizard" Style="{StaticResource HeaderLabelStyle}"/>
+                </Frame>
+            </Grid>
+
+            <!-- Height and Weight -->
+            <Grid Grid.Row="2" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Column="0" Style="{StaticResource InfoFrameStyle}">
+                    <StackLayout>
+                        <Label Text="HEIGHT" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="1.04 m" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Column="1" Style="{StaticResource InfoFrameStyle}">
+                    <StackLayout>
+                        <Label Text="WEIGHT" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="6.0 kg" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+
+            <!-- Type -->
+            <Frame Grid.Row="3" Style="{StaticResource InfoFrameStyle}">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="Type:" VerticalOptions="Center"/>
+                    <Frame BackgroundColor="LightGreen" Padding="5" Margin="5,0,0,0" CornerRadius="5">
+                        <Label Text="GRASS" TextColor="Black"/>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+
+            <!-- Base Stats -->
+            <Grid RowSpacing="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="HP:" Grid.Row="0" Grid.Column="0"/>
+                    <local:ProgressBar Grid.Row="0" Grid.Column="1" Progress="{Binding HP}" MaxValue="200"/>
+
+                    <Label Text="Attack:" Grid.Row="1" Grid.Column="0"/>
+                    <local:ProgressBar Grid.Row="1" Grid.Column="1" Progress="{Binding Attack}" MaxValue="200"/>
+
+                    <Label Text="Defense:" Grid.Row="2" Grid.Column="0"/>
+                    <local:ProgressBar Grid.Row="2" Grid.Column="1" Progress="{Binding Defense}" MaxValue="200"/>
+
+                    <Label Text="Sp. Atk:" Grid.Row="3" Grid.Column="0"/>
+                    <local:ProgressBar Grid.Row="3" Grid.Column="1" Progress="{Binding SpAtk}" MaxValue="200"/>
+
+                    <Label Text="Sp. Def:" Grid.Row="4" Grid.Column="0"/>
+                    <local:ProgressBar Grid.Row="4" Grid.Column="1" Progress="{Binding SpDef}" MaxValue="200"/>
+
+                    <Label Text="Speed:" Grid.Row="5" Grid.Column="0"/>
+                    <local:ProgressBar Grid.Row="5" Grid.Column="1" Progress="{Binding Speed}" MaxValue="200"/>
+                </Grid>
+
+            <!-- Evolution Chain -->
+            <Frame Grid.Row="5" Style="{StaticResource InfoFrameStyle}">
+                <StackLayout>
+<Label Text="Evolution Chain" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                        <Image Source="bubasaur.png" WidthRequest="50" HeightRequest="50"/>
+                        <Label Text="→" VerticalOptions="Center"/>
+                        <Image Source="ivysaur.png" WidthRequest="50" HeightRequest="50"/>
+                        <Label Text="→" VerticalOptions="Center"/>
+                        <Image Source="venasaur.png" WidthRequest="50" HeightRequest="50"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
