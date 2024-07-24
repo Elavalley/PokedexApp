@@ -1,14 +1,17 @@
+using System.Runtime.CompilerServices;
+using System.ComponentModel;
+
 namespace PokedexApp;
 
 public partial class PokemonPage : ContentPage
 {
-    
-    public PokemonPage(int PokeDexNum)
+    int PokedexNum = 1; 
+    public PokemonPage()
     {
         InitializeComponent();
         var viewModel = new PokemonDetailViewModel();
         BindingContext = viewModel;
-        viewModel.LoadPokemonDataAsync(PokeDexNum);
+        viewModel.LoadPokemonDataAsync(PokedexNum);
     }
     public class PokemonDetailViewModel
     {
@@ -83,13 +86,23 @@ public partial class PokemonPage : ContentPage
 
     public async Task LoadPokemonDataAsync(int pokemonId)
     {
-        var pokemonData = await ;
+        var pokemonData = new
+        {
+        HP = 100,
+        Attack = 100,
+        Defense = 100,
+        SpAtk = 100,
+        SpDef = 100,
+        Speed = 100
+        };
+ 
         HP = pokemonData.HP;
         Attack = pokemonData.Attack;
         Defense = pokemonData.Defense;
         SpAtk = pokemonData.SpAtk;
         SpDef = pokemonData.SpDef;
         Speed = pokemonData.Speed;
+        await Task.Delay(100);
     }
 }
 

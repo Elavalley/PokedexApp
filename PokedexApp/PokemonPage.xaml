@@ -47,7 +47,7 @@
 
                 <Frame Grid.Column="0" CornerRadius="200" BorderColor="#FF0000" Padding="0" 
 HeightRequest="400" WidthRequest="400">
-                    <Image Source="charizard.png" Aspect="AspectFill"/>
+                    <Image Source="charizard.png" Aspect="AspectFit"/>
                 </Frame>
 
                 <Frame Grid.Column="1" BackgroundColor="#FF0000" Padding="10">
@@ -87,7 +87,22 @@ HeightRequest="400" WidthRequest="400">
                 </StackLayout>
             </Frame>
 
-            <!-- Base Stats -->
+            
+
+            <!-- Evolution Chain -->
+            <Frame Grid.Row="5" Style="{StaticResource InfoFrameStyle}">
+                <StackLayout>
+                    <Label Text="Evolution Chain" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                        <Image Source="bulbasaur.png" WidthRequest="50" HeightRequest="50"/>
+                        <Label Text="→" VerticalOptions="Center"/>
+                        <Image Source="mewtwo.png" WidthRequest="50" HeightRequest="50"/>
+                        <Label Text="→" VerticalOptions="Center"/>
+                        <Image Source="venasaur.png" WidthRequest="50" HeightRequest="50"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        <!-- Base Stats -->
             <Grid RowSpacing="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -103,38 +118,23 @@ HeightRequest="400" WidthRequest="400">
                     </Grid.RowDefinitions>
 
                     <Label Text="HP:" Grid.Row="0" Grid.Column="0"/>
-                    <local:ProgressBar Grid.Row="0" Grid.Column="1" Progress="{Binding HP}" MaxValue="200"/>
+                    <local:ProgressBar Grid.Row="0" Grid.Column="1" BackgroundColor="Blue" Progress="{Binding HP}" MaxValue="200"/>
 
                     <Label Text="Attack:" Grid.Row="1" Grid.Column="0"/>
-                    <local:ProgressBar Grid.Row="1" Grid.Column="1" Progress="{Binding Attack}" MaxValue="200"/>
+                    <local:ProgressBar Grid.Row="1" Grid.Column="1" BackgroundColor="Blue" Progress="{Binding Attack}" MaxValue="200"/>
 
                     <Label Text="Defense:" Grid.Row="2" Grid.Column="0"/>
-                    <local:ProgressBar Grid.Row="2" Grid.Column="1" Progress="{Binding Defense}" MaxValue="200"/>
+                    <local:ProgressBar Grid.Row="2" Grid.Column="1" BackgroundColor="Blue" Progress="{Binding Defense}" MaxValue="200"/>
 
                     <Label Text="Sp. Atk:" Grid.Row="3" Grid.Column="0"/>
-                    <local:ProgressBar Grid.Row="3" Grid.Column="1" Progress="{Binding SpAtk}" MaxValue="200"/>
+                    <local:ProgressBar Grid.Row="3" Grid.Column="1" BackgroundColor="Blue" Progress="{Binding SpAtk}" MaxValue="200"/>
 
                     <Label Text="Sp. Def:" Grid.Row="4" Grid.Column="0"/>
-                    <local:ProgressBar Grid.Row="4" Grid.Column="1" Progress="{Binding SpDef}" MaxValue="200"/>
+                    <local:ProgressBar Grid.Row="4" Grid.Column="1" BackgroundColor="Blue" Progress="{Binding SpDef}" MaxValue="200"/>
 
                     <Label Text="Speed:" Grid.Row="5" Grid.Column="0"/>
-                    <local:ProgressBar Grid.Row="5" Grid.Column="1" Progress="{Binding Speed}" MaxValue="200"/>
+                    <local:ProgressBar Grid.Row="5" Grid.Column="1" BackgroundColor="Blue" Progress="{Binding Speed}" MaxValue="200"/>
                 </Grid>
-
-            <!-- Evolution Chain -->
-            <Frame Grid.Row="5" Style="{StaticResource InfoFrameStyle}">
-                <StackLayout>
-<Label Text="Evolution Chain" FontAttributes="Bold" HorizontalOptions="Center"/>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
-                        <Image Source="bubasaur.png" WidthRequest="50" HeightRequest="50"/>
-                        <Label Text="→" VerticalOptions="Center"/>
-                        <Image Source="ivysaur.png" WidthRequest="50" HeightRequest="50"/>
-                        <Label Text="→" VerticalOptions="Center"/>
-                        <Image Source="venasaur.png" WidthRequest="50" HeightRequest="50"/>
-                    </StackLayout>
-                </StackLayout>
-            </Frame>
-
         </Grid>
-    </ScrollView>
+    </ScrollView>   
 </ContentPage>

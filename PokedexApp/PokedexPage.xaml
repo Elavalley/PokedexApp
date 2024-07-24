@@ -18,7 +18,7 @@
                HasShadow="True">
             <Grid ColumnDefinitions="Auto,*">
                 <Image Grid.Column="0"
-                       Source="search_icon.png"
+                       Source="mewtwo.png"
                        HeightRequest="20"
                        WidthRequest="20"
                        Margin="10,0,0,0"
