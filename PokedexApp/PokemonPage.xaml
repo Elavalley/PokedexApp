@@ -18,7 +18,6 @@
             <Setter Property="Padding" Value="10"/>
             <Setter Property="Margin" Value="0,0,0,15"/>
         </Style>
-        <local:ProgressBar x:Key="ProgressBar"/>
     </ContentPage.Resources>
 
     <ScrollView>
@@ -35,7 +34,7 @@
 
             <!-- Info Bar -->
             <Frame Grid.Row="0" BackgroundColor="#FF0000" Padding="10" CornerRadius="0">
-                <Label Text="INFO" Style="{StaticResource HeaderLabelStyle}"/>
+                <Label Text="BULBASAUR" FontAttributes="Bold" Style="{StaticResource HeaderLabelStyle}"/>
             </Frame>
 
             <!-- Pokemon Name and Image -->
@@ -47,7 +46,7 @@
 
                 <Frame Grid.Column="0" CornerRadius="200" BorderColor="#FF0000" Padding="0" 
 HeightRequest="400" WidthRequest="400">
-                    <Image Source="charizard.png" Aspect="AspectFit"/>
+                    <Image Source="bulbasaur.png" Aspect="AspectFit"/>
                 </Frame>
 
                 <Frame Grid.Column="1" BackgroundColor="#FF0000" Padding="10">
@@ -58,34 +57,39 @@ HeightRequest="400" WidthRequest="400">
             <!-- Height and Weight -->
             <Grid Grid.Row="2" ColumnSpacing="10">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
                 <Frame Grid.Column="0" Style="{StaticResource InfoFrameStyle}">
                     <StackLayout>
                         <Label Text="HEIGHT" FontAttributes="Bold" HorizontalOptions="Center"/>
-                        <Label Text="1.04 m" HorizontalOptions="Center"/>
+                        <Label Text="{Binding Weight}" HorizontalOptions="Center"/>
                     </StackLayout>
                 </Frame>
 
-                <Frame Grid.Column="1" Style="{StaticResource InfoFrameStyle}">
+                <Frame Grid.Column="2" Style="{StaticResource InfoFrameStyle}">
                     <StackLayout>
                         <Label Text="WEIGHT" FontAttributes="Bold" HorizontalOptions="Center"/>
-                        <Label Text="6.0 kg" HorizontalOptions="Center"/>
+                        <Label Text="{Binding Weight}" HorizontalOptions="Center"/>
                     </StackLayout>
                 </Frame>
-            </Grid>
+
 
             <!-- Type -->
-            <Frame Grid.Row="3" Style="{StaticResource InfoFrameStyle}">
+            <Frame Grid.Row="2" Grid.Column="1" Style="{StaticResource InfoFrameStyle}">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                     <Label Text="Type:" VerticalOptions="Center"/>
-                    <Frame BackgroundColor="LightGreen" Padding="5" Margin="5,0,0,0" CornerRadius="5">
-                        <Label Text="GRASS" TextColor="Black"/>
+                    <Frame BackgroundColor="{Binding TypeColor1}" Padding="5" Margin="5,0,0,0" CornerRadius="5">
+                        <Label Text="{Binding Type1}" TextColor="Black"/>
+                    </Frame>
+                    <Frame BackgroundColor="{Binding TypeColor2}" Padding="5" Margin="5,0,0,0" CornerRadius="5">
+                        <Label Text="{Binding Type2}" TextColor="Black"/>
                     </Frame>
                 </StackLayout>
             </Frame>
+            </Grid>
 
             
 
@@ -96,14 +100,14 @@ HeightRequest="400" WidthRequest="400">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
                         <Image Source="bulbasaur.png" WidthRequest="50" HeightRequest="50"/>
                         <Label Text="→" VerticalOptions="Center"/>
-                        <Image Source="mewtwo.png" WidthRequest="50" HeightRequest="50"/>
+                        <Image Source="ivysaur.png" WidthRequest="50" HeightRequest="50"/>
                         <Label Text="→" VerticalOptions="Center"/>
                         <Image Source="venasaur.png" WidthRequest="50" HeightRequest="50"/>
                     </StackLayout>
                 </StackLayout>
             </Frame>
         <!-- Base Stats -->
-            <Grid RowSpacing="5">
+            <Grid Grid.Row="6"  RowSpacing="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -111,29 +115,128 @@ HeightRequest="400" WidthRequest="400">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <Label Text="HP:" Grid.Row="0" Grid.Column="0"/>
-                    <local:ProgressBar Grid.Row="0" Grid.Column="1" BackgroundColor="Blue" Progress="{Binding HP}" MaxValue="200"/>
+                    <Frame Grid.Row="0" BorderColor="Red" Padding="10" Margin="0,5,0,5" WidthRequest="750">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="HP:" Grid.Column="0" VerticalOptions="Center"/>
+                            <ProgressBar 
+                            Grid.Row="0" 
+                            Grid.Column="1" 
+                            Progress="{Binding HPProgress}" 
+                            WidthRequest="500"
+                            ProgressColor="Blue" 
+                            BackgroundColor="LightGray" ScaleY="3" />
+                            <Label Text="{Binding HP}" Grid.Column="2" VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                    
+                    <Frame Grid.Row="1" BorderColor="Red" Padding="10" Margin="0,5,0,5" WidthRequest="750">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Attack:" Grid.Column="0" VerticalOptions="Center"/>
+                            <ProgressBar 
+                            Grid.Row="1" 
+                            Grid.Column="1" 
+                            ProgressColor="Blue" 
+                            WidthRequest="500"
+                            BackgroundColor="LightGray" 
+                            Progress="{Binding AttackProgress}" ScaleY="3"/>
+                            <Label Text="{Binding Attack}" Grid.Column="2" VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                    
 
-                    <Label Text="Attack:" Grid.Row="1" Grid.Column="0"/>
-                    <local:ProgressBar Grid.Row="1" Grid.Column="1" BackgroundColor="Blue" Progress="{Binding Attack}" MaxValue="200"/>
+                    <Frame Grid.Row="2" BorderColor="Red" Padding="10" Margin="0,5,0,5" WidthRequest="750"> 
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Defense:" Grid.Column="0" VerticalOptions="Center"/>
+                            <ProgressBar 
+                            Grid.Row="2" 
+                            Grid.Column="1" 
+                            ProgressColor="Blue" 
+                            WidthRequest="500"
+                            BackgroundColor="LightGray" 
+                            Progress="{Binding DefenseProgress}" ScaleY="3"/>
+                            <Label Text="{Binding Defense}" Grid.Column="2" VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
 
-                    <Label Text="Defense:" Grid.Row="2" Grid.Column="0"/>
-                    <local:ProgressBar Grid.Row="2" Grid.Column="1" BackgroundColor="Blue" Progress="{Binding Defense}" MaxValue="200"/>
+                    <Frame Grid.Row="3" BorderColor="Red" Padding="10" Margin="0,5,0,5" WidthRequest="750">
+                        <Grid Grid.Row="3" Margin="0,0,0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="SpAtk:" Grid.Column="0" VerticalOptions="Center"/>
+                            <ProgressBar 
+                            Grid.Row="3" 
+                            Grid.Column="1" 
+                            ProgressColor="Blue" 
+                            WidthRequest="500"
+                            BackgroundColor="LightGray" 
+                            Progress="{Binding SpAtkProgress}" ScaleY="3"/>
+                            <Label Text="{Binding SpAtk}" Grid.Column="2" VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                    
+                    <Frame Grid.Row="4" BorderColor="Red" Padding="10" Margin="0,5,0,5" WidthRequest="750">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="SpDef:" Grid.Column="0" VerticalOptions="Center"/>
+                            <ProgressBar 
+                            Grid.Row="4" 
+                            Grid.Column="1" 
+                            ProgressColor="Blue" 
+                            WidthRequest="500"
+                            BackgroundColor="LightGray" 
+                            Progress="{Binding SpDefProgress}" ScaleY="3"/>
+                            <Label Text="{Binding SpDef}" Grid.Column="2" VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
 
-                    <Label Text="Sp. Atk:" Grid.Row="3" Grid.Column="0"/>
-                    <local:ProgressBar Grid.Row="3" Grid.Column="1" BackgroundColor="Blue" Progress="{Binding SpAtk}" MaxValue="200"/>
 
-                    <Label Text="Sp. Def:" Grid.Row="4" Grid.Column="0"/>
-                    <local:ProgressBar Grid.Row="4" Grid.Column="1" BackgroundColor="Blue" Progress="{Binding SpDef}" MaxValue="200"/>
-
-                    <Label Text="Speed:" Grid.Row="5" Grid.Column="0"/>
-                    <local:ProgressBar Grid.Row="5" Grid.Column="1" BackgroundColor="Blue" Progress="{Binding Speed}" MaxValue="200"/>
+                    <Frame Grid.Row="5" BorderColor="Red" Padding="10" Margin="0,5,0,5" WidthRequest="750">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Speed:" Grid.Column="0" VerticalOptions="Center"/>
+                            <ProgressBar 
+                            Grid.Row="5" 
+                            Grid.Column="1" 
+                            ProgressColor="Blue" 
+                            BackgroundColor="LightGray" 
+                            WidthRequest="500"
+                            Progress="{Binding SpeedProgress}" ScaleY="3"/>
+                            <Label Text="{Binding Speed}" Grid.Column="2" VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
                 </Grid>
         </Grid>
     </ScrollView>   

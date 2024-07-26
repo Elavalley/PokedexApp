@@ -33,9 +33,9 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\image1.png" Resize="True" BaseSize="300,185"/>
-		<MauiImage Update="Resources\Images\image2.png" Resize="True" BaseSize="300,185"/>
-		<MauiImage Update="Resources\Images\image3.png" Resize="True" BaseSize="300,185"/>
+		<MauiImage Update="Resources\Images\image1.png" Resize="True" BaseSize="300,185" />
+		<MauiImage Update="Resources\Images\image2.png" Resize="True" BaseSize="300,185" />
+		<MauiImage Update="Resources\Images\image3.png" Resize="True" BaseSize="300,185" />
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 
@@ -47,6 +47,7 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="MongoDB.Driver" Version="2.28.0" />
 	</ItemGroup>
 
 </Project>

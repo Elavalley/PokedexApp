@@ -34,6 +34,9 @@
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/zh-Hans/Microsoft.Maui.Controls.resources.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/zh-Hant/Microsoft.Maui.Controls.resources.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/runtimeconfig.bin
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/AWSSDK.Core.dll
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/AWSSDK.SecurityToken.dll
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/DnsClient.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/Microsoft.Extensions.Configuration.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/Microsoft.Extensions.Configuration.Abstractions.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/Microsoft.Extensions.DependencyInjection.dll
@@ -49,6 +52,13 @@
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/Microsoft.Maui.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/Microsoft.Maui.Essentials.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/Microsoft.Maui.Graphics.dll
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/MongoDB.Bson.dll
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/MongoDB.Driver.dll
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/MongoDB.Driver.Core.dll
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/MongoDB.Libmongocrypt.dll
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/SharpCompress.dll
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/Snappier.dll
+/Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/ZstdSharp.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/Microsoft.Maui.Controls.HotReload.Forms.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
 /Users/ethanlavalley/Desktop/PokedexApp/PokedexApp/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../PokedexApp.app/Microsoft.VisualStudio.DesignTools.TapContract.dll
