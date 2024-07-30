@@ -50,7 +50,7 @@ HeightRequest="400" WidthRequest="400">
                 </Frame>
 
                 <Frame Grid.Column="1" BackgroundColor="#FF0000" Padding="10">
-                    <Label Text="Charizard" Style="{StaticResource HeaderLabelStyle}"/>
+                    <Label Text="Bulbasaur" Style="{StaticResource HeaderLabelStyle}"/>
                 </Frame>
             </Grid>
 
@@ -98,7 +98,7 @@ HeightRequest="400" WidthRequest="400">
                 <StackLayout>
                     <Label Text="Evolution Chain" FontAttributes="Bold" HorizontalOptions="Center"/>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
-                        <Image Source="bulbasaur.png" WidthRequest="50" HeightRequest="50"/>
+                        <Image Source="bulbasaur.png" WidthRequest="50" HeightRequest="50"/> //turn into buttons to take to that page?
                         <Label Text="→" VerticalOptions="Center"/>
                         <Image Source="ivysaur.png" WidthRequest="50" HeightRequest="50"/>
                         <Label Text="→" VerticalOptions="Center"/>
