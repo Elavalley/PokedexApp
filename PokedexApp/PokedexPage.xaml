@@ -17,8 +17,8 @@
                CornerRadius="30"
                BorderColor="#FFA500" 
                HasShadow="True"
-               BackgroundColor="#FFFFFF">
-            <Grid ColumnDefinitions="Auto,*">
+               BackgroundColor="#FFFFFF">            
+               <Grid ColumnDefinitions="Auto,*">
                 <Image Grid.Column="0"
                        Source="mewtwo.png"
                        HeightRequest="24"
