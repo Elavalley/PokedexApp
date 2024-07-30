@@ -4,7 +4,8 @@
              x:Class="PokedexApp.PokedexPage">
     <ContentPage.Background>
         <LinearGradientBrush EndPoint="0,1">
-            <GradientStop Color="#333333" Offset="0.1"/>
+            <GradientStop Color="#4a4a4a" Offset="0.0"/>
+            <GradientStop Color="#333333" Offset="0.5"/>
             <GradientStop Color="#000000" Offset="1.0"/>
         </LinearGradientBrush>
     </ContentPage.Background>
@@ -14,57 +15,70 @@
                Margin="20,40,20,20"
                Padding="5"
                CornerRadius="30"
-               BorderColor="Gray"
-               HasShadow="True">
+               BorderColor="#FFA500" 
+               HasShadow="True"
+               BackgroundColor="#FFFFFF">
             <Grid ColumnDefinitions="Auto,*">
                 <Image Grid.Column="0"
                        Source="mewtwo.png"
-                       HeightRequest="20"
-                       WidthRequest="20"
+                       HeightRequest="24"
+                       WidthRequest="24"
                        Margin="10,0,0,0"
                        VerticalOptions="Center" />
                 <Entry Grid.Column="1"
                        x:Name="searchEntry"
                        Placeholder="Search Pokémon"
-                       PlaceholderColor="Gray"
+                       PlaceholderColor="#888888"
                        TextChanged="OnSearchTextChanged"
                        VerticalOptions="Center"
                        FontSize="16"
-                       Margin="10,0,10,0" />
+                       Margin="10,0,10,0"
+                       TextColor="#333333" /> <!-- Darker text color -->
             </Grid>
         </Frame>
-
         <CollectionView Grid.Row="1" 
-                        x:Name="pokemonList"
-                        Margin="20,0,20,20">
+                x:Name="pokemonList"
+                Margin="20,0,20,20"
+                BackgroundColor="#1A1A1A"> <!-- Darker background for contrast -->
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Text="{Binding PokeDexNum}" Grid.Column="0"/>
-                        <Label Text="{Binding Name}" Grid.Column="1"/>
-                    </Grid>
+                    <Frame CornerRadius="10" 
+                           Padding="10" 
+                           Margin="0,5" 
+                           BorderColor="#FFA500"> <!-- Consistent color theme -->
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding PokeDexNum}" 
+                                   Grid.Column="0"
+                                   TextColor="#FFFFFF"/> <!-- White text for visibility -->
+                            <Label Text="{Binding Name}" 
+                                   Grid.Column="1"
+                                   TextColor="#FFFFFF"/> <!-- White text for visibility -->
+                        </Grid>
+                    </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
         <Button
-                x:Name="start"
-                BorderColor="Blue"
-                FontFamily="PokedexApp/Resources/Fonts/HvDTrial_Brandon_Grotesque_black-BF64a625c944b08.otf"
-                BorderWidth="3"
-                FontAttributes="Bold"
-                CornerRadius="20"
-                Padding="10,5"
-                BackgroundColor="#FFCC00"
-                TextColor="Black"
-                FontSize="25"
-                Text="Start from pokedex 0"
-                SemanticProperties.Hint="Start from Pokedex number 0"
-                Clicked="OnStartClicked" 
-                HorizontalOptions="Fill"
-                VerticalOptions="Fill"/>
+          x:Name="start"
+          BorderColor="#FFA500"
+          FontFamily="PokedexApp/Resources/Fonts/HvDTrial_Brandon_Grotesque_black-BF64a625c944b08.otf"
+          BorderWidth="2"
+          FontAttributes="Bold"
+          CornerRadius="25"
+          Padding="10,5"
+          BackgroundColor="#FFCC00"
+          TextColor="#333333"
+          FontSize="20"
+          Text="Start from Pokedex 0"
+          SemanticProperties.Hint="Start from Pokedex number 0"
+          Clicked="OnStartClicked"
+          HorizontalOptions="Fill"
+          VerticalOptions="End"
+          Margin="20,0"/>
+
     </Grid>
 </ContentPage>
