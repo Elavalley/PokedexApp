@@ -122,7 +122,7 @@ HeightRequest="400" WidthRequest="400">
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <Frame Grid.Row="0" BorderColor="Red" Padding="10" BackgroundColor="LightGray" CornerRadius="20" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center">
+                    <Frame Grid.Row="0" BorderColor="Red" Padding="10" BackgroundColor="White" CornerRadius="20" Margin="0,10,0,5" WidthRequest="750" HorizontalOptions="Center">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -141,26 +141,26 @@ HeightRequest="400" WidthRequest="400">
                         </Grid>
                     </Frame>
                     
-                    <Frame Grid.Row="1" BorderColor="Red" Padding="10" BackgroundColor="LightGray" CornerRadius="20" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Text="Attack:  {Binding Attack}" Grid.Column="0" FontAttributes="Bold" VerticalOptions="Center"/>
-                            <ProgressBar 
-                            Grid.Row="1" 
-                            Grid.Column="1" 
-                            ProgressColor="Blue" 
-                            WidthRequest="500"
-                            BackgroundColor="LightGray" 
-                            Progress="{Binding AttackProgress}" ScaleY="3"/>
-                        </Grid>
+                    <Frame Grid.Row="1" BorderColor="Blue" Padding="10" BackgroundColor="White" CornerRadius="20" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="Attack:  {Binding Attack}" Grid.Column="0" FontAttributes="Bold" VerticalOptions="Center"/>
+                                <ProgressBar 
+                                Grid.Row="1" 
+                                Grid.Column="1" 
+                                ProgressColor="Blue" 
+                                WidthRequest="500"
+                                BackgroundColor="LightGray" 
+                                Progress="{Binding AttackProgress}" ScaleY="3"/>
+                            </Grid>
                     </Frame>
                     
 
-                    <Frame Grid.Row="2" BorderColor="Red" Padding="10" BackgroundColor="LightGray" CornerRadius="20" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center"> 
+                    <Frame Grid.Row="2" BorderColor="Orange" Padding="10" BackgroundColor="White" CornerRadius="20" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center"> 
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -178,7 +178,7 @@ HeightRequest="400" WidthRequest="400">
                         </Grid>
                     </Frame>
 
-                    <Frame Grid.Row="3" BorderColor="Red" Padding="10" BackgroundColor="LightGray" CornerRadius="20" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center">
+                    <Frame Grid.Row="3" BorderColor="Purple" Padding="10" BackgroundColor="White" CornerRadius="20" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center">
                         <Grid Grid.Row="3" Margin="0,0,0,5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -196,7 +196,7 @@ HeightRequest="400" WidthRequest="400">
                         </Grid>
                     </Frame>
                     
-                    <Frame Grid.Row="4" BorderColor="Red" CornerRadius="20" BackgroundColor="LightGray" Padding="10" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center">
+                    <Frame Grid.Row="4" BorderColor="Yellow" CornerRadius="20" BackgroundColor="White" Padding="10" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -215,7 +215,7 @@ HeightRequest="400" WidthRequest="400">
                     </Frame>
 
 
-                    <Frame Grid.Row="5" BorderColor="Red" CornerRadius="20" BackgroundColor="LightGray" Padding="10" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center" >
+                    <Frame Grid.Row="5" BorderColor="Green" CornerRadius="20" BackgroundColor="White" Padding="10" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center" >
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -232,8 +232,8 @@ HeightRequest="400" WidthRequest="400">
                             Progress="{Binding SpeedProgress}" ScaleY="3"/>
                         </Grid>
                     </Frame>
-                    <Frame Grid.Row="6" BorderColor="Red" CornerRadius="20" BackgroundColor="LightGray" Padding="10" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Start" >
-                        <Label Text="Base Stats: {Binding BaseStatTotal}" Grid.Column="0" FontAttributes="Bold" />
+                    <Frame Grid.Row="6" BorderColor="Black" CornerRadius="20" BackgroundColor="White" Padding="10" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center" >
+                        <Label Text="Base Stats: {Binding BaseStatTotal}" Grid.Column="2" FontAttributes="Bold" HorizontalOptions="Center"/>
                     </Frame>
                       
                 </Grid>

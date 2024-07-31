@@ -112,16 +112,19 @@ public partial class PokemonPage : ContentPage
         set
         {
             _spd = value;
+            
             OnPropertyChanged();
             OnPropertyChanged(nameof(SpeedProgress));
         }
     }
     public double SpeedProgress => Speed / 200.0;
 
-    #endregion
-    public event PropertyChangedEventHandler PropertyChanged;
+        #endregion
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
+        public event PropertyChangedEventHandler PropertyChanged;
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 
-    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
