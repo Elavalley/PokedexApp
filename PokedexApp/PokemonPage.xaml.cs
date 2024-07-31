@@ -191,17 +191,17 @@ public partial class PokemonPage : ContentPage
                 if (pokemon != null)
                 {
                     // Map database fields to properties
-                    Number = pokemon.Number;
-                    Name = pokemon.Name;
-                    Attack = pokemon.Attack;
-                    Defense = pokemon.Defense;
-                    Speed = pokemon.Speed;
-                    HP = pokemon.HP;
-                    Type1 = pokemon.Type1;
-                    Type2 = pokemon.Type2;
-                    Weight = pokemon.Weight;
-                    Height = pokemon.Height;
-                    BaseTotal = pokemon.BaseTotal;
+                    Number = pokemon["Number"].AsInt32;
+                    Name = pokemon["Name"].AsString;
+                    HP = pokemon["HP"].AsInt32;
+                    Attack = pokemon["Attack"].AsDouble;
+                    Defense = pokemon["Defense"].AsDouble;
+                    Speed = pokemon["Speed"].AsDouble;
+                    Type1 = pokemon["Type1"].AsString;
+                    Type2 = pokemon.Contains("Type2") ? pokemon["Type2"].AsString : null;
+                    Weight = pokemon["Weight"].AsString;
+                    Height = pokemon["Height"].AsString;
+                    BaseTotal = pokemon["BaseTotal"].AsString;
 
                     // Add other properties you need to set
                 }
