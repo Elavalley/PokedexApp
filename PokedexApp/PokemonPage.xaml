@@ -50,7 +50,7 @@ HeightRequest="400" WidthRequest="400">
                 </Frame>
 
                 <Frame Grid.Column="1" BackgroundColor="#FF0000" Padding="10">
-                    <Label Text="Bulbasaur" Style="{StaticResource HeaderLabelStyle}"/>
+                    <Label Text="{Binding Name}" Style="{StaticResource HeaderLabelStyle}"/>
                 </Frame>
             </Grid>
 

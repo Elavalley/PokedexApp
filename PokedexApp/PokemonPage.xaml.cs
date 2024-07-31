@@ -1,39 +1,43 @@
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using MongoDB.Driver;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+using MongoDB.Bson;
+using System.Threading.Tasks;
+using System;
 
 namespace PokedexApp;
 
+
 public partial class PokemonPage : ContentPage
 {
-    int PokedexNum = 1; 
-    public PokemonPage()
+    
+    private static string userInput = "";
+    public static string GetUserInput() { return userInput; }
+    public PokemonPage(string userInput)
     {
         InitializeComponent();
         var viewModel = new PokemonDetailViewModel();
         BindingContext = viewModel;
-        viewModel.LoadPokemonDataAsync(PokedexNum);
+        viewModel.LoadPokemonDataAsync(userInput);
     }
     public class PokemonDetailViewModel
     {
     
-    #region stat binders
+    #region attribute binders
     
-    private int _id;
-    public int ID
+    private int number;
+    public int Number
     {
-    get => _id;
-    set { _id = value; OnPropertyChanged(); }
+    get => number;
+    set { number = value; OnPropertyChanged(); }
     }
 
-    private string _name;
+    private string name;
     public string Name
     {
-    get => _name;
-    set { _name = value; OnPropertyChanged(); }
-}
+    get => name;
+    set { name = value; OnPropertyChanged(); }
+    }
     
     
     private int _hp;
@@ -118,43 +122,101 @@ public partial class PokemonPage : ContentPage
         }
     }
     public double SpeedProgress => Speed / 200.0;
+    
 
+    private string type1;
+    public string Type1
+    {
+    get => type1;
+    set { type1 = value; OnPropertyChanged(); }
+    }
+
+    private string type2;
+    public string Type2
+    {
+    get => type2;
+    set { type2 = value; OnPropertyChanged(); }
+    }
+
+    private string height;
+    public string Height
+    {
+    get => height;
+    set { height = value; OnPropertyChanged(); }
+    }
+
+    private string weight;
+    public string Weight
+    {
+    get => weight;
+    set { weight = value; OnPropertyChanged(); }
+    }
+
+    private string baseTotal;
+    public string BaseTotal
+    {
+    get => baseTotal;
+    set { baseTotal = value; OnPropertyChanged(); }
+    }
         #endregion
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
+
+
+
+
         public event PropertyChangedEventHandler PropertyChanged;
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
-    public async Task LoadPokemonDataAsync(int pokemonId)
-        {
-        string connectionstring = "mongodb+srv://tkhanpsn:Pokegocult@pokedex.mayccu6.mongodb.net";
-        string databaseName = "Pokemon";
-        string collectionName = "PokeDex";
+    public async Task LoadPokemonDataAsync(string pokemonName)
+    {
+        try
+            {
+            string connectionString = "mongodb+srv://tkhanpsn:Pokegocult@pokedex.mayccu6.mongodb.net";
+            string databaseName = "Pokedex";
+            string collectionName = "Pokemon";
 
-        var client = new MongoClient(connectionstring);
-        var database = client.GetDatabase(databaseName);
-        var collection = database.GetCollection<PokemonDetailViewModel>(collectionName);
+            var client = new MongoClient(connectionString);
+            var database = client.GetDatabase(databaseName);
+            var collection = database.GetCollection<PokemonDetailViewModel>(collectionName);
 
-        var filter = Builders<PokemonDetailViewModel>.Filter.Eq("Id", pokemonId);
-        var pokemon = await collection.Find(filter).FirstOrDefaultAsync();
+            
 
-        if (pokemon != null)
-        {
-        ID = pokemon.ID;
-        Name = pokemon.Name;
-        HP = pokemon.HP;
-        Attack = pokemon.Attack;
-        Defense = pokemon.Defense;
-        SpAtk = pokemon.SpAtk;
-        SpDef = pokemon.SpDef;
-        Speed = pokemon.Speed;
-        // Add any other properties you need to set
-        }
-        }
+            // Use Builders<PokemonViewModel>.Filter instead of Builders<BsonDocument>.Filter
+            var filter = Builders<PokemonDetailViewModel>.Filter.Eq("Name", PokemonPage.userInput);
+
+                var pokemon = await collection.Find(filter).FirstOrDefaultAsync();
+                if (pokemon != null)
+                {
+                    // Map database fields to properties
+                    Number = pokemon.Number;
+                    Name = pokemon.Name;
+                    Attack = pokemon.Attack;
+                    Defense = pokemon.Defense;
+                    Speed = pokemon.Speed;
+                    HP = pokemon.HP;
+                    Type1 = pokemon.Type1;
+                    Type2 = pokemon.Type2;
+                    Weight = pokemon.Weight;
+                    Height = pokemon.Height;
+                    BaseTotal = pokemon.BaseTotal;
+
+                    // Add other properties you need to set
+                }
+                else
+                {
+                    Console.WriteLine("Pokemon Not Found");
+                }
+            }
+            
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An Error occurred: {ex.Message}");
+            }
+            }
+}
 }
 
-}
+

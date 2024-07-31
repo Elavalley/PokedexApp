@@ -20,7 +20,7 @@
                BackgroundColor="#FFFFFF">            
                <Grid ColumnDefinitions="Auto,*">
                 <Image Grid.Column="0"
-                       Source="mewtwo.png"
+                       Source="closed.png"
                        HeightRequest="24"
                        WidthRequest="24"
                        Margin="10,0,0,0"
