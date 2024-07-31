@@ -1,20 +1,41 @@
 namespace PokedexApp;
 public partial class PokedexPage : ContentPage 
     {
-
-         private static string userInput = "";
-        public static string GetUserInput() { return userInput; }
         public PokedexPage()
         {        
             InitializeComponent();
         }
-        private async void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+        private async void OnSearch(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PokemonPage(userInput));
+            string searchText = searchEntry.Text.Trim();
+            if (!string.IsNullOrWhiteSpace(searchText))
+                {
+                    await Navigation.PushAsync(new PokemonPage(searchText));
+                }
+            else
+            {
+            await DisplayAlert("Invalid Search", "Please enter a Pokémon name", "OK");
+
+            }
         }
         private async void OnStartClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new PokemonPage("Bulbasaur"));  
         }
+        private async void OnSearchButtonClicked(object sender, EventArgs e)
+        {
+            string searchText = searchEntry.Text?.Trim();
+
+            if (!string.IsNullOrWhiteSpace(searchText))
+                {
+                    await Navigation.PushAsync(new PokemonPage(searchText));
+                }
+            else
+            {
+             await DisplayAlert("Invalid Search", "Please enter a Pokémon name", "OK");
+
+            }        
+        }
+
 
 }

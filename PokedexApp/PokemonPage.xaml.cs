@@ -11,14 +11,23 @@ namespace PokedexApp;
 public partial class PokemonPage : ContentPage
 {
     
-    private static string userInput = "";
-    public static string GetUserInput() { return userInput; }
-    public PokemonPage(string userInput)
+    public PokemonPage(string searchText)
     {
         InitializeComponent();
         var viewModel = new PokemonDetailViewModel();
         BindingContext = viewModel;
-        viewModel.LoadPokemonDataAsync(userInput);
+        //viewModel.LoadPokemonDataAsync(searchText);
+        TestConnection();
+
+    }
+    private async void TestConnection()
+    {
+    var viewModel = (PokemonDetailViewModel)BindingContext;
+    bool connectionSuccessful = await viewModel.TestMongoConnection();
+    if (!connectionSuccessful)
+    {
+    await DisplayAlert("Connection Error", "Failed to connect to the database", "OK");
+    }
     }
     public class PokemonDetailViewModel
     {
@@ -174,23 +183,33 @@ public partial class PokemonPage : ContentPage
     {
         try
             {
+            Console.WriteLine($"Attempting to connect to database and search for {pokemonName}");
+            
             string connectionString = "mongodb+srv://tkhanpsn:Pokegocult@pokedex.mayccu6.mongodb.net";
             string databaseName = "Pokedex";
-            string collectionName = "Pokemon";
+            string collectionName = "Pokedex.Pokemon";
 
             var client = new MongoClient(connectionString);
-            var database = client.GetDatabase(databaseName);
-            var collection = database.GetCollection<PokemonDetailViewModel>(collectionName);
+            Console.WriteLine("MongoClient created successfully");
 
+            var database = client.GetDatabase(databaseName);
+            Console.WriteLine("Database retrieved successfully");
             
 
-            // Use Builders<PokemonViewModel>.Filter instead of Builders<BsonDocument>.Filter
-            var filter = Builders<PokemonDetailViewModel>.Filter.Eq("Name", PokemonPage.userInput);
+            var collection = database.GetCollection<PokemonDetailViewModel>(collectionName);
+            Console.WriteLine("Collection retrieved successfully");
 
-                var pokemon = await collection.Find(filter).FirstOrDefaultAsync();
+
+            //Use Builders<PokemonViewModel>.Filter instead of Builders<BsonDocument>.Filter
+            var filter = Builders<PokemonDetailViewModel>.Filter.Eq($" Name", "{pokemonName}");
+            var pokemon = await collection.Find(filter).FirstOrDefaultAsync();
+            Console.WriteLine("Find operation completed");
+
+
                 if (pokemon != null)
                 {
                     // Map database fields to properties
+                    Console.WriteLine($"Pokemon Found: {pokemonName}");
                     Number = pokemon.Number;
                     Name = pokemon.Name;
                     Attack = pokemon.Attack;
@@ -206,17 +225,56 @@ public partial class PokemonPage : ContentPage
                     // Add other properties you need to set
                 }
                 else
-                {
-                    Console.WriteLine("Pokemon Not Found");
-                }
+                    {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Pokemon Not Found", "OK");
+                    }
             }
-            
             catch (Exception ex)
             {
-                Console.WriteLine($"An Error occurred: {ex.Message}");
+            await Application.Current.MainPage.DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
             }
-            }
-}
+        }
+    public async Task<bool> TestMongoConnection()
+    {
+    try
+    {
+    Console.WriteLine("Attempting to connect to MongoDB...");
+    string connectionString = "mongodb+srv://tkhanpsn:Pokegocult@pokedex.mayccu6.mongodb.net";
+    var client = new MongoClient(connectionString);
+
+    // List all databases
+    Console.WriteLine("Listing databases:");
+    using (var cursor = await client.ListDatabasesAsync())
+    {
+    await cursor.ForEachAsync(db => Console.WriteLine(db.GetValue("name").AsString));
+    }
+
+    // Assuming "Pokedex" is the correct database name
+    var database = client.GetDatabase("Pokedex");
+
+    // List all collections in the Pokedex database
+    Console.WriteLine("Listing collections in Pokedex database:");
+    using (var cursor = await database.ListCollectionNamesAsync())
+    {
+    await cursor.ForEachAsync(name => Console.WriteLine(name));
+    }
+
+    // Now try to access the Pokemon collection
+    var collection = database.GetCollection<BsonDocument>("Pokemon");
+    var count = await collection.CountDocumentsAsync(new BsonDocument());
+    Console.WriteLine($"Document count in Pokemon collection: {count}");
+
+    return true;
+    }
+    catch (Exception ex)
+    {
+    Console.WriteLine($"Error: {ex.GetType().Name} - {ex.Message}");
+    Console.WriteLine($"Stack trace: {ex.StackTrace}");
+    return false;
+    }
+    }
+
+    }
 }
 
 
