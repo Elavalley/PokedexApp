@@ -177,7 +177,7 @@ public partial class PokemonPage : ContentPage
             
             string connectionString = "mongodb+srv://tkhanpsn:Pokegocult@pokedex.mayccu6.mongodb.net/";
             string databaseName = "Pokedex";
-            string collectionName = "Pokedex.Pokemon";
+            string collectionName = "Pokemon";
 
             var client = new MongoClient(connectionString);
             Console.WriteLine("MongoClient created successfully");
@@ -211,6 +211,19 @@ public partial class PokemonPage : ContentPage
                     Weight = pokemon.Weight;
                     Height = pokemon.Height;
                     BaseTotal = pokemon.BaseTotal;
+
+                    Console.WriteLine("Properties assigned successfully");
+                    OnPropertyChanged(nameof(Number));
+                    OnPropertyChanged(nameof(Name));
+                    OnPropertyChanged(nameof(Attack));
+                    OnPropertyChanged(nameof(Defense));
+                    OnPropertyChanged(nameof(Speed));
+                    OnPropertyChanged(nameof(HP));
+                    OnPropertyChanged(nameof(Type1));
+                    OnPropertyChanged(nameof(Type2));
+                    OnPropertyChanged(nameof(Weight));
+                    OnPropertyChanged(nameof(Height));
+                    OnPropertyChanged(nameof(BaseTotal));
 
                     // Add other properties you need to set
                 }
