@@ -18,28 +18,28 @@
                BorderColor="#FFA500" 
                HasShadow="True"
                BackgroundColor="#FFFFFF">            
-               <Grid ColumnDefinitions="Auto,*">
+            <Grid ColumnDefinitions="Auto,*">
                 <Image Grid.Column="0"
                        Source="closed.png"
                        HeightRequest="24"
                        WidthRequest="24"
                        Margin="10,0,0,0"
                        VerticalOptions="Center" />
-                <Entry Grid.Column="1"
-                       x:Name="searchEntry"
-                       Placeholder="Search Pokémon"
-                       PlaceholderColor="#888888"
-                       TextChanged="OnSearchTextChanged"
-                       VerticalOptions="Center"
-                       FontSize="16"
-                       Margin="10,0,10,0"
-                       TextColor="#333333" /> <!-- Darker text color -->
+                <SearchBar Grid.Column="1"
+                           x:Name="searchBar"
+                           Placeholder="Search Pokémon"
+                           PlaceholderColor="#888888"
+                           SearchButtonPressed="OnSearchPressed"
+                           VerticalOptions="Center"
+                           FontSize="16"
+                           Margin="10,0,10,0"
+                           TextColor="#333333" /> <!-- Darker text color -->
             </Grid>
         </Frame>
         <CollectionView Grid.Row="1" 
-                x:Name="pokemonList"
-                Margin="20,0,20,20"
-                BackgroundColor="#1A1A1A"> <!-- Darker background for contrast -->
+                        x:Name="pokemonList"
+                        Margin="20,0,20,20"
+                        BackgroundColor="#1A1A1A"> <!-- Darker background for contrast -->
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame CornerRadius="10" 
@@ -79,6 +79,5 @@
           HorizontalOptions="Fill"
           VerticalOptions="End"
           Margin="20,0"/>
-
     </Grid>
 </ContentPage>
