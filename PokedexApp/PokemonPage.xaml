@@ -34,7 +34,7 @@
 
             <!-- Info Bar -->
             <Frame Grid.Row="0" BackgroundColor="#FF0000" Padding="10" CornerRadius="0">
-                <Label Text="BULBASAUR" FontAttributes="Bold" Style="{StaticResource HeaderLabelStyle}"/>
+                <Label Text="{Binding Name}" FontAttributes="Bold" Style="{StaticResource HeaderLabelStyle}"/>
             </Frame>
 
             <!-- Pokemon Name and Image -->
@@ -233,7 +233,7 @@ HeightRequest="400" WidthRequest="400">
                         </Grid>
                     </Frame>
                     <Frame Grid.Row="6" BorderColor="Black" CornerRadius="20" BackgroundColor="White" Padding="10" Margin="0,5,0,5" WidthRequest="750" HorizontalOptions="Center" >
-                        <Label Text="Base Stats: {Binding BaseStatTotal}" Grid.Column="2" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="Base Stats: {Binding BaseTotal}" Grid.Column="2" FontAttributes="Bold" HorizontalOptions="Center"/>
                     </Frame>
                       
                 </Grid>
