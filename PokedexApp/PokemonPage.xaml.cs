@@ -50,7 +50,7 @@ public partial class PokemonPage : ContentPage
             OnPropertyChanged(nameof(HPProgress));
         }
     }
-    public double HPProgress => HP / 200.0;
+    public double HPProgress => (Double)HP / 200.0;
     
     
     private double _atk;
@@ -64,7 +64,7 @@ public partial class PokemonPage : ContentPage
             OnPropertyChanged(nameof(AttackProgress));
         }
     }
-    public double AttackProgress => Attack / 200.0;
+    public double AttackProgress => (Double)Attack / 200.0;
     
     
     private double _def;
@@ -78,7 +78,7 @@ public partial class PokemonPage : ContentPage
             OnPropertyChanged(nameof(DefenseProgress));
         }
     }
-    public double DefenseProgress => Defense / 200.0;
+    public double DefenseProgress => (Double)Defense / 200.0;
     
     private double _spatk;
     public double SpAtk
@@ -91,7 +91,7 @@ public partial class PokemonPage : ContentPage
             OnPropertyChanged(nameof(SpAtkProgress));
         }
     }
-    public double SpAtkProgress => SpAtk / 200.0;
+    public double SpAtkProgress => (Double)SpAtk / 200.0;
 
 
     private double _spdef;
@@ -105,7 +105,7 @@ public partial class PokemonPage : ContentPage
             OnPropertyChanged(nameof(SpDefProgress));
         }
     }
-    public double SpDefProgress => SpDef / 200.0;
+    public double SpDefProgress => (Double)SpDef / 200.0;
 
 
     private double _spd;
@@ -120,7 +120,7 @@ public partial class PokemonPage : ContentPage
             OnPropertyChanged(nameof(SpeedProgress));
         }
     }
-    public double SpeedProgress => Speed / 200.0;
+    public double SpeedProgress => (Double)Speed / 200.0;
     
 
     private string type1;
