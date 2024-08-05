@@ -2,13 +2,13 @@ namespace PokedexApp;
 public partial class PokedexPage : ContentPage 
     {
 
-         private static string userInput = "";
+        private static string userInput = "";
         public static string GetUserInput() { return userInput; }
         public PokedexPage()
         {        
             InitializeComponent();
         }
-        private async void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+        private async void OnSearchPressed(object sender, TextChangedEventArgs e)
         {
             await Navigation.PushAsync(new PokemonPage(userInput));
         }
