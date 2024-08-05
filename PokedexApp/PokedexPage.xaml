@@ -25,20 +25,16 @@
                        WidthRequest="24"
                        Margin="10,0,0,0"
                        VerticalOptions="Center" />
-                <Entry Grid.Column="1"
-                       x:Name="searchEntry"
-                       Placeholder="Search Pokémon"
-                       PlaceholderColor="#888888"
-                       Completed="OnSearch"
-                       VerticalOptions="Center"
-                       FontSize="16"
-                       Margin="10,0,10,0"
-                       TextColor="#333333" />
-                <Button Grid.Column="2"
-                        Text="Search"
-                        Clicked="OnSearchButtonClicked"
-                        VerticalOptions="Center"
-                        Margin="0,0,10,0" /> 
+                <SearchBar Grid.Column="1"
+                           x:Name="searchBar"
+                           Placeholder="Search Pokémon"
+                           PlaceholderColor="#888888"
+                           TextChanged="OnTextChanged"
+                           SearchButtonPressed="OnSearchPressed"
+                           VerticalOptions="Center"
+                           FontSize="16"
+                           Margin="10,0,10,0"
+                           TextColor="#333333" />
             </Grid>
         </Frame>
         <!-- <CollectionView Grid.Row="1" 

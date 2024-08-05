@@ -130,8 +130,8 @@ public partial class PokemonPage : ContentPage
     set { type1 = value; OnPropertyChanged(); }
     }
 
-    private string type2;
-    public string Type2
+    private string? type2;
+    public string? Type2
     {
     get => type2;
     set { type2 = value; OnPropertyChanged(); }
