@@ -29,6 +29,7 @@
                            x:Name="searchBar"
                            Placeholder="Search Pokémon"
                            PlaceholderColor="#888888"
+                           TextChanged="OnTextChanged"
                            SearchButtonPressed="OnSearchPressed"
                            VerticalOptions="Center"
                            FontSize="16"
